@@ -1,0 +1,41 @@
+ALGORITHM length_Sentence
+VAR
+    S:STRING:="The best in the world"
+    count:INTEGER:=0
+BEGIN
+    FOR (int i=0; i<S.length();i++) DO
+       IF(S.charAt[i]!=" ") THEN
+         count++
+       END_IF
+    END_FOR
+    write(count)
+
+END
+
+
+ALGORITHM Nbr_Word_InSentence
+VAR
+    S:STRING:="The best in the world"
+    count:INTEGER:=1
+BEGIN
+    FOR i in S DO
+       IF (S[i]==" ")  THEN
+          count++
+       END_IF
+    END_FOR
+    write(count)
+END
+
+ALGORITHM Nbr_Voyelles
+VAR
+   S:STRING:="The best in the world"
+   count:INTEGER:=0
+   Liste_voy:CHAR:=["a","e","o","u","i","y"]
+BEGIN
+    FOR i in S DO
+      IF i in Liste_voy THEN  
+        count++
+      END_IF
+    END_FOR  
+    write (count)  
+END 
